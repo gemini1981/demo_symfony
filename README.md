@@ -29,15 +29,15 @@ $ php bin/console assets:install
 $ mysql -u <username> -p < symfony.sql
 ```
 
-* configurare i parametri per la connessione al database nel file:
+**NOTE:** è possibile modificare i parametri per la connessione al database tramite il file di configurazione
 
+```bash
 ../myProject/app/config/parameters.yml
-
+```
 
 * eseguire il server interno
 
 ```bash
-$ cd symfony_demo/
 $ php bin/console server:run
 ```
 
