@@ -1,4 +1,2 @@
-myProject
-=========
-
-A Symfony project created on January 16, 2018, 12:33 am.
+# demo_symfony
+semplice progetto realizzato con Symfony 3
