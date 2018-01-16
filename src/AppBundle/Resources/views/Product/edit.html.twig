@@ -1,0 +1,17 @@
+{% extends "@AppBundle/base.html.twig" %}
+
+{% block title %}AppBundle:Product:edit{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Edit</h1>
+        <h2>{{ product.nome }} - id: {{ product.id }}</h2>
+        <img src="{{ vich_uploader_asset(product, 'imageFile') }}" alt="{{product.imageName }}" class="img-thumbnail" height="150"/>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+        <br>
+        <button class="btn-secondary btn pull-right" onclick="window.location.href = '/product/list';">List</button>
+    </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "@AppBundle/base.html.twig" %}
+
+{% block title %}AppBundle:Product:list{% endblock %}
+
+{% block body %}
+    <div class="container">
+{#        {{ dump(products) }}#}
+        <h1>List</h1>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+        <br>
+        <button class="btn-secondary btn pull-right" onclick="window.location.href='/product/create';">New</button>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">nome</th>
+                    <th scope="col">descrizione</th>
+                    <th scope="col">data creazione</th>
+                    <th scope="col">tags</th>
+                    <th scope="col">immagine</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in products %}
+                    <tr onClick="document.location.href = '/product/{{p.id}}/edit';">
+                        <th scope="row">{{ p.id }}</th>
+                        <td>{{ p.nome }}</td>
+                        <td>{{ p.descrizione }}</td>
+                        <td>{{ p.dataCreazione|date('Y-m-d') }}</td>
+                        <td>{% for t in p.tags %}{{ t.tag }}<br>{% endfor %}</td>
+                        <td>
+                            <img src="{{ vich_uploader_asset(p, 'imageFile') }}" alt="{{p.imageName }}" class="img-thumbnail" style="height: 80px;"/>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "@AppBundle/base.html.twig" %}
+
+{# add this at the beginning of your template #}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block title %}AppBundle:Product:create{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>New</h1>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+        <br>
+        <button class="btn-secondary btn pull-right" onclick="window.location.href = '/product/list';">List</button>
+    </div>
+{% endblock %}
