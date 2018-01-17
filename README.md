@@ -4,14 +4,14 @@ semplice progetto realizzato con Symfony 3
 
 ### Installing
 
-* clonare il progetto con Git oppore scaricare il file compresso con il progetto.
+* clonare il progetto con Git oppure scaricare il file compresso con il progetto.
 
 ```bash
 $ git clone https://github.com/gemini1981/demo_symfony myProject
 $ cd myProject/
 ```
 
-* eseguire composeer --no-interaction
+* eseguire composer --no-interaction
 
 ```bash
 $ composer install
