@@ -14,7 +14,7 @@ $ cd myProject/
 * eseguire composer
 
 ```bash
-$ composer install --no-interaction
+$ composer install
 ```
 
 * eseguire il comando
