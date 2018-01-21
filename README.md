@@ -11,10 +11,10 @@ $ git clone https://github.com/gemini1981/demo_symfony myProject
 $ cd myProject/
 ```
 
-* eseguire composer --no-interaction
+* eseguire composer
 
 ```bash
-$ composer install
+$ composer install --no-interaction
 ```
 
 * eseguire il comando
